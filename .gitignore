@@ -2,3 +2,5 @@
 static/
 artifacts/
 .env
+__pycache__/
+examples/sql/demo.db

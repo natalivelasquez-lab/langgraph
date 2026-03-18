@@ -7,3 +7,4 @@ openai==1.69.0
 langchain-core==0.3.49
 langchain-openai==0.3.11
 langgraph==0.3.21
+sqlalchemy==2.0.39

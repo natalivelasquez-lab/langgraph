@@ -1,0 +1,14 @@
+schema_name,table_name,column_name,column_description,data_type,data_format,related_table,related_column
+analytics,customers,customer_id,Identificador único del cliente,INTEGER,,orders,customer_id
+analytics,customers,full_name,Nombre completo del cliente,VARCHAR,Texto libre,,
+analytics,customers,city,Ciudad principal del cliente,VARCHAR,Texto libre,,
+analytics,customers,segment,Segmento comercial del cliente,VARCHAR,Texto libre,,
+analytics,orders,order_id,Identificador único de la orden,INTEGER,,order_items,order_id
+analytics,orders,customer_id,Cliente que realizó la orden,INTEGER,,customers,customer_id
+analytics,orders,order_date,Fecha en la que se creó la orden,DATE,YYYY-MM-DD,,
+analytics,orders,status,Estado actual de la orden,VARCHAR,created|paid|cancelled|shipped,,
+analytics,order_items,order_item_id,Identificador de la línea de pedido,INTEGER,,,
+analytics,order_items,order_id,Orden asociada a la línea,INTEGER,,orders,order_id
+analytics,order_items,product_name,Nombre del producto vendido,VARCHAR,Texto libre,,
+analytics,order_items,quantity,Cantidad vendida,INTEGER,,,
+analytics,order_items,unit_price,Precio unitario del producto,DECIMAL,"12,2",,
