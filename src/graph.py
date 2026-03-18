@@ -58,9 +58,11 @@ def _load_system_prompt() -> str:
         "Si la pregunta requiere datos externos, usa una herramienta.\n"
         "Herramientas disponibles:\n"
         "- get_weather(location): clima actual por ciudad\n"
-        "- generate_image(prompt): genera imagen y retorna ruta\n\n"
+        "- generate_image(prompt): genera imagen y retorna ruta\n"
+        "- query_sql_database(question, database_url?, schema_csv_path?, sql_query?, max_rows?): consulta una base SQL estructurada\n\n"
         "Si el usuario pregunta por clima, extrae la ciudad del mensaje y llama get_weather.\n"
         "Si el usuario pide una imagen, llama generate_image con un prompt corto.\n"
+        "Si el usuario pregunta por datos estructurados, ventas, clientes, pedidos o métricas en SQL, llama query_sql_database.\n"
         "Después de usar herramientas, redacta la respuesta final."
     )
 
